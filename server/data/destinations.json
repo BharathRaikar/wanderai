@@ -1,0 +1,167 @@
+[
+  {
+    "id": "dest-1", "name": "Paris", "country": "France", "continent": "Europe",
+    "lat": 48.8566, "lng": 2.3522,
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
+    "description": "The City of Light dazzles with world-class art, cuisine, and the iconic Eiffel Tower.",
+    "tags": ["romantic","culture","art","food","history"],
+    "climate": "temperate", "bestMonths": [4,5,6,9,10], "avgTempC": 12,
+    "budgetLevel": "high", "avgDailyCostUSD": 200, "languages": ["French"],
+    "currency": "EUR", "timezone": "CET", "rating": 4.8,
+    "highlights": ["Eiffel Tower","Louvre Museum","Notre-Dame Cathedral","Montmartre","Seine River Cruise"]
+  },
+  {
+    "id": "dest-2", "name": "Tokyo", "country": "Japan", "continent": "Asia",
+    "lat": 35.6762, "lng": 139.6503,
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
+    "description": "A mesmerizing blend of futuristic technology and ancient tradition in the world's largest city.",
+    "tags": ["culture","food","technology","history","nightlife"],
+    "climate": "temperate", "bestMonths": [3,4,5,10,11], "avgTempC": 15,
+    "budgetLevel": "medium", "avgDailyCostUSD": 150, "languages": ["Japanese"],
+    "currency": "JPY", "timezone": "JST", "rating": 4.9,
+    "highlights": ["Shibuya Crossing","Senso-ji Temple","Mt. Fuji Day Trip","Akihabara","Tsukiji Fish Market"]
+  },
+  {
+    "id": "dest-3", "name": "Bali", "country": "Indonesia", "continent": "Asia",
+    "lat": -8.3405, "lng": 115.0920,
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+    "description": "Tropical paradise with stunning rice terraces, ancient temples, and vibrant nightlife.",
+    "tags": ["beach","relaxation","culture","spiritual","adventure"],
+    "climate": "tropical", "bestMonths": [4,5,6,7,8,9], "avgTempC": 28,
+    "budgetLevel": "low", "avgDailyCostUSD": 60, "languages": ["Balinese","Indonesian"],
+    "currency": "IDR", "timezone": "WITA", "rating": 4.7,
+    "highlights": ["Tegallalang Rice Terraces","Uluwatu Temple","Seminyak Beach","Mount Batur Sunrise","Ubud Monkey Forest"]
+  },
+  {
+    "id": "dest-4", "name": "New York City", "country": "USA", "continent": "North America",
+    "lat": 40.7128, "lng": -74.0060,
+    "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80",
+    "description": "The Big Apple never sleeps — iconic skyline, world-class museums, and endless dining.",
+    "tags": ["culture","food","nightlife","shopping","art"],
+    "climate": "temperate", "bestMonths": [4,5,6,9,10,11], "avgTempC": 13,
+    "budgetLevel": "high", "avgDailyCostUSD": 250, "languages": ["English"],
+    "currency": "USD", "timezone": "EST", "rating": 4.7,
+    "highlights": ["Central Park","Times Square","Metropolitan Museum","Brooklyn Bridge","Statue of Liberty"]
+  },
+  {
+    "id": "dest-5", "name": "Barcelona", "country": "Spain", "continent": "Europe",
+    "lat": 41.3851, "lng": 2.1734,
+    "image": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80",
+    "description": "Gaudí's architectural masterpieces, Mediterranean beaches, and buzzing tapas culture.",
+    "tags": ["culture","beach","art","food","architecture"],
+    "climate": "mediterranean", "bestMonths": [4,5,6,9,10], "avgTempC": 18,
+    "budgetLevel": "medium", "avgDailyCostUSD": 130, "languages": ["Spanish","Catalan"],
+    "currency": "EUR", "timezone": "CET", "rating": 4.8,
+    "highlights": ["Sagrada Família","Park Güell","Las Ramblas","Camp Nou","Gothic Quarter"]
+  },
+  {
+    "id": "dest-6", "name": "Cape Town", "country": "South Africa", "continent": "Africa",
+    "lat": -33.9249, "lng": 18.4241,
+    "image": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80",
+    "description": "Dramatic landscapes where mountains meet the ocean — wine country, safaris, and vibrant culture.",
+    "tags": ["nature","adventure","beach","wine","wildlife"],
+    "climate": "mediterranean", "bestMonths": [11,12,1,2,3,4], "avgTempC": 17,
+    "budgetLevel": "low", "avgDailyCostUSD": 80, "languages": ["English","Afrikaans","Xhosa"],
+    "currency": "ZAR", "timezone": "SAST", "rating": 4.7,
+    "highlights": ["Table Mountain","Cape of Good Hope","Boulders Beach Penguins","Stellenbosch Wine Tour","Victoria & Alfred Waterfront"]
+  },
+  {
+    "id": "dest-7", "name": "Maldives", "country": "Maldives", "continent": "Asia",
+    "lat": 3.2028, "lng": 73.2207,
+    "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
+    "description": "Crystal-clear lagoons, overwater bungalows, and pristine coral reefs for the ultimate luxury escape.",
+    "tags": ["beach","luxury","relaxation","water sports","romantic"],
+    "climate": "tropical", "bestMonths": [11,12,1,2,3,4], "avgTempC": 30,
+    "budgetLevel": "luxury", "avgDailyCostUSD": 500, "languages": ["Dhivehi","English"],
+    "currency": "MVR", "timezone": "MVT", "rating": 4.9,
+    "highlights": ["Overwater Bungalow Stay","Snorkeling with Manta Rays","Dolphin Watching","Sunset Cruise","Coral Reef Diving"]
+  },
+  {
+    "id": "dest-8", "name": "Machu Picchu", "country": "Peru", "continent": "South America",
+    "lat": -13.1631, "lng": -72.5450,
+    "image": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80",
+    "description": "The lost city of the Incas perched high in the Andes — one of the world's greatest archaeological sites.",
+    "tags": ["history","adventure","nature","hiking","culture"],
+    "climate": "highland", "bestMonths": [4,5,6,7,8,9], "avgTempC": 14,
+    "budgetLevel": "medium", "avgDailyCostUSD": 100, "languages": ["Spanish","Quechua"],
+    "currency": "PEN", "timezone": "PET", "rating": 4.9,
+    "highlights": ["Machu Picchu Citadel","Inca Trail Hike","Huayna Picchu Mountain","Sacred Valley","Rainbow Mountain"]
+  },
+  {
+    "id": "dest-9", "name": "Dubai", "country": "UAE", "continent": "Middle East",
+    "lat": 25.2048, "lng": 55.2708,
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    "description": "Futuristic skyline, luxury shopping, and desert adventures in the jewel of the Arabian Gulf.",
+    "tags": ["luxury","shopping","architecture","desert","nightlife"],
+    "climate": "desert", "bestMonths": [11,12,1,2,3], "avgTempC": 24,
+    "budgetLevel": "high", "avgDailyCostUSD": 300, "languages": ["Arabic","English"],
+    "currency": "AED", "timezone": "GST", "rating": 4.6,
+    "highlights": ["Burj Khalifa","Dubai Mall","Desert Safari","Palm Jumeirah","Dubai Creek Gold Souk"]
+  },
+  {
+    "id": "dest-10", "name": "Santorini", "country": "Greece", "continent": "Europe",
+    "lat": 36.3932, "lng": 25.4615,
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
+    "description": "Iconic white-washed villages, breathtaking caldera views, and legendary Aegean sunsets.",
+    "tags": ["romantic","beach","food","culture","relaxation"],
+    "climate": "mediterranean", "bestMonths": [4,5,6,9,10], "avgTempC": 20,
+    "budgetLevel": "high", "avgDailyCostUSD": 220, "languages": ["Greek"],
+    "currency": "EUR", "timezone": "EET", "rating": 4.8,
+    "highlights": ["Oia Sunset","Caldera View","Akrotiri Archaeological Site","Red Beach","Wine Tasting Tour"]
+  },
+  {
+    "id": "dest-11", "name": "Kyoto", "country": "Japan", "continent": "Asia",
+    "lat": 35.0116, "lng": 135.7681,
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+    "description": "Japan's ancient capital — a treasure trove of temples, geisha districts, and bamboo groves.",
+    "tags": ["culture","history","spiritual","nature","art"],
+    "climate": "temperate", "bestMonths": [3,4,5,10,11], "avgTempC": 14,
+    "budgetLevel": "medium", "avgDailyCostUSD": 120, "languages": ["Japanese"],
+    "currency": "JPY", "timezone": "JST", "rating": 4.9,
+    "highlights": ["Fushimi Inari Shrine","Arashiyama Bamboo Grove","Kinkaku-ji Golden Pavilion","Gion District","Nishiki Market"]
+  },
+  {
+    "id": "dest-12", "name": "Patagonia", "country": "Argentina/Chile", "continent": "South America",
+    "lat": -50.9423, "lng": -73.4068,
+    "image": "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?w=800&q=80",
+    "description": "Raw, untamed wilderness at the end of the world — glaciers, mountains, and pristine lakes.",
+    "tags": ["adventure","nature","hiking","wildlife","photography"],
+    "climate": "subpolar", "bestMonths": [11,12,1,2,3], "avgTempC": 8,
+    "budgetLevel": "medium", "avgDailyCostUSD": 110, "languages": ["Spanish"],
+    "currency": "ARS/CLP", "timezone": "ART", "rating": 4.8,
+    "highlights": ["Perito Moreno Glacier","Torres del Paine","Los Glaciares National Park","Tierra del Fuego","Fitz Roy Trek"]
+  },
+  {
+    "id": "dest-13", "name": "Goa", "country": "India", "continent": "Asia",
+    "lat": 15.2993, "lng": 74.1240,
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
+    "description": "India's beach paradise — a heady mix of golden sands, Portuguese heritage, spice markets, and vibrant nightlife.",
+    "tags": ["beach","relaxation","culture","food","nightlife"],
+    "climate": "tropical", "bestMonths": [11,12,1,2,3], "avgTempC": 27,
+    "budgetLevel": "low", "avgDailyCostUSD": 50, "languages": ["Konkani","English","Hindi"],
+    "currency": "INR", "timezone": "IST", "rating": 4.6,
+    "highlights": ["Baga & Calangute Beaches","Old Goa Churches","Dudhsagar Waterfalls","Anjuna Flea Market","Spice Plantation Tour"]
+  },
+  {
+    "id": "dest-14", "name": "Rajasthan", "country": "India", "continent": "Asia",
+    "lat": 26.9124, "lng": 75.7873,
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
+    "description": "The Land of Kings — a riot of colour, majestic forts, desert dunes, and royal palaces that tell a thousand stories.",
+    "tags": ["history","culture","art","architecture","adventure"],
+    "climate": "desert", "bestMonths": [10,11,12,1,2,3], "avgTempC": 25,
+    "budgetLevel": "low", "avgDailyCostUSD": 55, "languages": ["Hindi","Rajasthani","English"],
+    "currency": "INR", "timezone": "IST", "rating": 4.8,
+    "highlights": ["Amber Fort","City Palace Jaipur","Jaisalmer Sand Dunes","Lake Pichola Udaipur","Pushkar Camel Fair"]
+  },
+  {
+    "id": "dest-15", "name": "Kerala", "country": "India", "continent": "Asia",
+    "lat": 9.9312, "lng": 76.2673,
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80",
+    "description": "God's Own Country — tranquil backwaters, spice-scented hillside tea estates, and Ayurvedic wellness retreats.",
+    "tags": ["nature","relaxation","spiritual","food","wildlife"],
+    "climate": "tropical", "bestMonths": [10,11,12,1,2,3], "avgTempC": 26,
+    "budgetLevel": "low", "avgDailyCostUSD": 55, "languages": ["Malayalam","English"],
+    "currency": "INR", "timezone": "IST", "rating": 4.8,
+    "highlights": ["Alleppey Houseboat Stay","Munnar Tea Estates","Periyar Tiger Reserve","Kathakali Dance","Kovalam Beach"]
+  }
+]

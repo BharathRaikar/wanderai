@@ -1,0 +1,36 @@
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Environment variables (never commit secrets) ───────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Database / persistent data (user-generated, not source code) ───────────────
+server/data/_users.json
+server/data/_itineraries.json
+server/data/_bookings.json
+server/data/*.db
+server/data/*.db-shm
+server/data/*.db-wal
+
+# ── Build output ───────────────────────────────────────────────────────────────
+client/dist/
+client/.vite/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── OS / editor noise ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
