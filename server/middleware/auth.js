@@ -1,16 +1,16 @@
 const jwt = require('jsonwebtoken');
-const { getUserById } = require('../database');
+const User = require('../models/User');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'wanderai-secret-key-change-in-production';
 
 // Required auth — returns 401 if missing/invalid
-function requireAuth(req, res, next) {
+async function requireAuth(req, res, next) {
   const token = extractToken(req);
   if (!token) return res.status(401).json({ error: 'Authentication required.' });
 
   try {
     const payload = jwt.verify(token, JWT_SECRET);
-    const user = getUserById(payload.userId);
+    const user = await User.findOne({ id: payload.userId }).select('-password');
     if (!user) return res.status(401).json({ error: 'User not found.' });
     req.user = user;
     next();
@@ -20,12 +20,12 @@ function requireAuth(req, res, next) {
 }
 
 // Optional auth — attaches user if present but doesn't block
-function optionalAuth(req, _res, next) {
+async function optionalAuth(req, _res, next) {
   const token = extractToken(req);
   if (token) {
     try {
       const payload = jwt.verify(token, JWT_SECRET);
-      req.user = getUserById(payload.userId) || null;
+      req.user = await User.findOne({ id: payload.userId }).select('-password') || null;
     } catch {
       req.user = null;
     }

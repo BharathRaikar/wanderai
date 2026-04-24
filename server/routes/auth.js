@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const { createUser, getUserByEmail, getUserById } = require('../database');
+const User = require('../models/User');
 const { requireAuth, signToken } = require('../middleware/auth');
 
 function uuidv4() {
@@ -23,17 +23,24 @@ router.post('/register', async (req, res) => {
     if (!/\S+@\S+\.\S+/.test(email))
       return res.status(400).json({ error: 'Invalid email address.' });
 
-    const existing = getUserByEmail(email);
+    const existing = await User.findOne({ email: email.toLowerCase() });
     if (existing) return res.status(409).json({ error: 'An account with this email already exists.' });
 
     const hashed = await bcrypt.hash(password, 12);
     const id = uuidv4();
-    createUser(id, name.trim(), email.toLowerCase().trim(), hashed);
+    const newUser = await User.create({
+      id,
+      name: name.trim(),
+      email: email.toLowerCase().trim(),
+      password: hashed
+    });
 
-    const user = getUserById(id);
+    const userObj = newUser.toObject();
+    delete userObj.password;
+
     const token = signToken(id);
 
-    res.status(201).json({ success: true, token, user });
+    res.status(201).json({ success: true, token, user: userObj });
   } catch (err) {
     console.error('Register error:', err);
     res.status(500).json({ error: 'Registration failed.' });
@@ -48,16 +55,17 @@ router.post('/login', async (req, res) => {
     if (!email || !password)
       return res.status(400).json({ error: 'Email and password are required.' });
 
-    const user = getUserByEmail(email.toLowerCase().trim());
+    const user = await User.findOne({ email: email.toLowerCase().trim() });
     if (!user) return res.status(401).json({ error: 'Invalid email or password.' });
 
     const match = await bcrypt.compare(password, user.password);
     if (!match) return res.status(401).json({ error: 'Invalid email or password.' });
 
     const token = signToken(user.id);
-    const { password: _, ...safeUser } = user;
+    const userObj = user.toObject();
+    delete userObj.password;
 
-    res.json({ success: true, token, user: safeUser });
+    res.json({ success: true, token, user: userObj });
   } catch (err) {
     console.error('Login error:', err);
     res.status(500).json({ error: 'Login failed.' });
