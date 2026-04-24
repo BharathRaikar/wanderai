@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
@@ -40,6 +41,7 @@ export default function App() {
   return (
     <AuthProvider>
       <AppShell />
+      <Analytics />
     </AuthProvider>
   )
 }
