@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation } from 'react-router-dom'
 import { getItinerary } from '../services/api'
 import HotelCard from '../components/HotelCard'
 import ActivityCard from '../components/ActivityCard'
@@ -24,7 +24,16 @@ export default function ItineraryPage() {
   const [expandedDay, setExpandedDay] = useState(1)
   const [bookingModal, setBookingModal] = useState(null)
 
+  const location = useLocation()
+
   useEffect(() => {
+    // If navigation passed the itinerary directly (just generated), use it instantly
+    if (location.state?.itinerary) {
+      setItinerary(location.state.itinerary)
+      setLoading(false)
+      return
+    }
+    // Otherwise fetch from DB (e.g. user navigated directly via URL)
     getItinerary(id)
       .then(data => { setItinerary(data); setLoading(false) })
       .catch(() => { setError('Could not load itinerary.'); setLoading(false) })

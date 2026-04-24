@@ -71,7 +71,7 @@ export default function Planner() {
     setError(null)
     try {
       const itinerary = await generateItinerary(form)
-      navigate(`/itinerary/${itinerary.id}`)
+      navigate(`/itinerary/${itinerary.id}`, { state: { itinerary } })
     } catch (err) {
       setError(err.response?.data?.error || 'Failed to generate itinerary. Please try again.')
       setLoading(false)
